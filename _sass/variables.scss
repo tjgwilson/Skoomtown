@@ -1,14 +1,24 @@
 // Breakpoints
-$large-breakpoint: 64em !default;
-$medium-breakpoint: 42em !default;
+// $large-breakpoint: 64em !default;
+$large-breakpoint: 600px !default;
+$medium-breakpoint: 900em !default;
 
 // Headers
 $header-heading-color: #fff !default;
-$header-bg-color: #159957 !default;
+$header-bg-color: #607D8B !default;
 $header-bg-color-secondary: #155799 !default;
 
+//Main
+$main-bg-color: #fff !default;
+
+//Button
+$btn-border1: #000000 !default;
+$btn-background: #fff !default;
+$btn-color: #000000 !default;
+
+
 // Text
-$section-headings-color: #159957 !default;
+$section-headings-color: #455A64 !default;
 $body-text-color: #606c71 !default;
 $body-link-color: #1e6bb8 !default;
 $blockquote-text-color: #819198 !default;

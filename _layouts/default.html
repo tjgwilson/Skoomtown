@@ -2,34 +2,35 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
 
+    
     <style> 
-        .geeks { 
-            width: 300px; 
-            height: 300px; 
+        .hover_zoom { 
+            width: 100%;
+            height: 100%;
             overflow: hidden; 
             margin: 0 auto; 
+/*           margin: 0; */
         } 
       
-        .geeks img { 
-            width: 100%; 
-            transition: 0.5s all ease-in-out; 
+        .hover_zoom img { 
+            transition: 1.0s all ease-in-out;
         } 
       
-        .geeks:hover img { 
-            transform: scale(1.5); 
+        .hover_zoom:hover img { 
+            transform: scale(3.0); 
         } 
     </style> 
     
    
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78PYP64GSC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-78PYP64GSC');
+    </script>
     <meta charset="UTF-8">
 
 {% seo %}
@@ -40,35 +41,372 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-    </header>
-
+  
+  
+ 
+<!---------------- header ------------------->
+<body>
+    
+    <div id="header">
+      <div class="row">
+      
+      <div class="column3">
+        <div style="text-align:center;">
+          <img src="./Exeter_white_logo.png" alt="Exeter" style="height:5em;padding-top:1em;">
+        </div>
+      </div>
+      <div class="column2">
+        <h1> The Enigma of Hydrogen Emission from T Tauri Stars </h1>
+      </div>
+        
+      </div>
+    </div>
+  
+<!------------------------------------------------------ main -------------------------------------------------------------------------->
     <main id="content" class="main-content" role="main">
-      {{ content }}
       
+<!---------------- pdf poster ------------------->
+      <div class="row">
+          <div style="text-align: center; padding-top: 0em;">
+            <a href="./Hartmann2021_TomWilson.pdf"><button class="btn btn-1 btn-1c">PDF Poster</button></a>
+          </div>      
+      </div>
       
-       <div class="geeks"> 
-        <img src="tjgwilson.github.io/visit_lightBackground0005.png" /> 
-       </div>
+<!----------------summary & contacts ------------------->
+      <div class="ex1" style="padding-bottom: 5rem;"></div> 
+      
+      <div class="ex1">
+        <div class="row" style="padding-top: 5rem;">
+          
+          <div class="column3">
+            <div class="ex2" style="text-align:center">
+              <h1>Tom J. G. Wilson</h1>
+              <p style="font-size: 1.3em; font-weight: bold;"> 
+              S. Matt,</br>
+              T.J. Harries</p>
+              </br>
+              <div style="padding: 0em 0em 0.7em;">
+                <p style="font-size: 1.1em;font-weight: bold;"> <a href="mailto:tjgw201@exeter.ac.uk">tjgw201@exeter.ac.uk</a></p>
+                <a href="https://twitter.com/TomAstroWilson" class="twitter-follow-button" data-lang="en" data-show-count="false">Follow @TomAstroWilson</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+             
+              <div style="text-align: center; padding-top: 1em;">
+                <a href="http://empslocal.ex.ac.uk/AWESoMeStars/"><img src="./logowhitetrans.png" alt="AWESoMeStars" style="height: 6em;"></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column2" style="text-align:center">
+            <h1>Summary</h1>
+            <ul>
+              <li>We compare hydrogen emission from 29 T Tauri stars with a grid 945 of synthetic line profiles.</li></br>
+              <li>Our synthetic line profiles match the observed H⍺ widths, intensities and profile morphologies.</li></br>
+              <li>However, our study indicates that reproducing H⍺, Paschen, and Brackett lines simultaneously is problematic. The synthetic infrared lines are too narrow and exhibit a higher than observed frequency of Inverse P-Cygni profiles.</li></br>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+  <!---------------- Radiative Transfer -------------------> 
+      <div class="row" style="padding-top: 5rem;">
+        
+        <div class="column">
+          <div id="hover" class="hover_zoom">
+            <div class="container">
+              <img id="IDmodel" src="./visit_lightBackgroundDisk0002.png" alt="Model" style="width:100%;">
+              <div id="IDwind" class="wind">Stellar wind</div>
+              <div id="IDstar" class="star">Star</div>
+              <div id="IDaccretion" class="accretion">Accretion</br>funnel</div>
+            </div>
+          </div>
+          <div id="video" style="text-align:center;width:100%;display:none;">
+            <h1>Line Profile creation</h1>
+            <ul>
+              <li>The video shows H⍺ emission for velocity relative to the viewer (left) and the total integrated flux (right).</li>
+            </ul>
+<!--             <video class="fade-in" style="width:70%;float:center;border: 1px solid #607D8B;padding: 2px;" playsinline autoplay muted loop controls='true' autobuffer>
+              <source src="./doppler.webm?ngsw-bypass=true" type="video/webm">
+              <source src="./doppler.mp4?ngsw-bypass=true" type="video/mp4">
+              <source src="./Combined Stacks.ogg?ngsw-bypass=true" type="video/ogg">
+              video format incompatible
+            </video> -->
+            <img class="fade-in" style="width:90%;float:center;border: 1px solid #607D8B;padding: 2px;", src = "./HA_PG_PB_BG.gif" />
+         </div>
+       </div>  
+
+      <div class="column fade-in">
+        <h1 style="text-align:center;"> Radiative Transfer Model - TORUS<sup><a href="#harries2019">1</a></sub></h1>
+        <div style="width:100%;padding: 1em 2em 1em;text-align:center;">
+          <button onclick="onlyShow('hover');hideText('video');hideText('torusText');showText('IDwind');showText('IDstar');showText('IDaccretion');imgZoom('IDmodel');showText('model');hideText('torus');checktext('torusText','torus','model');" class="btn btn-1 btn-1c">Model</br>Parameters</button>
+          <button onclick="showHideImg('video','hover');hideText('torusText');showText('torus');hideText('model');imgZoomOut('IDmodel');hideText('IDwind');hideText('IDstar');hideText('IDaccretion');checktext('torusText','model','torus');" class="btn btn-1 btn-1c">Torus</br>Workflow</button>
+        </div>
+        
+        <div id ="torusText" style="display:block;width:100%;float:left;text-align:center;padding-top:4em;">
+          <ul>
+          <li style="padding-top:2em;">Synthetic line profile computed using the radiative transfer code <b><a href="https://www.astro.ex.ac.uk/people/th2/torus_html/homepage.html">TORUS</a></b>.</li>
+          </ul>  
+        </div>
+        
+        
+        <div id ="model" style="display: none;width:100%;float:left;text-align:center;">
+           <div class="flow fade-in" style="-webkit-animation-delay: 0s;-moz-animation-delay: 0s;animation-delay: 0s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Star</p></div>
+            <img src="./eq1.png" alt="eq.1" style="height:1em;padding-top:3px;"></br>
+            <img src="./eq2.png" alt="eq.2" style="height:1em;padding-top:3px;"></br>
+            <img src="./eq3.png" alt="eq.3" style="height:1em;padding-top:3px;">
+          </div></br>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0.1s;-moz-animation-delay: 0.1s;animation-delay: 0.1s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Accretion Funnel</p></div>
+            <img src="./eq4.png" alt="eq.4" style="height:2.5em;padding-top:3px;"></br>
+            <img src="./eq5.png" alt="eq.5" style="height:1em;padding-top:3px;"></br>
+            <img src="./eq6.png" alt="eq.6" style="height:1.1em;padding-top:3px;"></br>
+            <img src="./eq7.png" alt="eq.7" style="height:1em;padding-top:3px;">                                                                     
+          </div></br>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0.2s;-moz-animation-delay: 0.2s;animation-delay: 0.2s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Stellar Wind</p></div>
+            <img src="./eq8.png" alt="eq.8" style="height:1.1em;padding-top:3px;"></br>
+            <img src="./eq9.png" alt="eq.9" style="height:1em;padding-top:3px;">  
+          </div>                                                      
+        </div>
+
+        <div id ="torus" style="display: none;width:100%;text-align:center;">
+          <p style="font-size: 1.3em; font-weight: bold; text-align:center;"> Torus Workflow</p>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0s;-moz-animation-delay: 0s;animation-delay: 0s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Input</p></div>
+            <p>Analytic Model</p>
+          </div></br>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0.1s;-moz-animation-delay: 0.1s;animation-delay: 0.1s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Grid</p></div>
+            <p>2.5D with adaptive mesh refinement</p>
+          </div></br>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0.2s;-moz-animation-delay: 0.2s;animation-delay: 0.2s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Microphysics</p></div>
+            <p>Atomic statistical equilibrium calculated for non-LTE. Sobolev with exact integration and pressure broadening</p>
+          </div></br>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0.3s;-moz-animation-delay: 0.3s;animation-delay: 0.3s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Final RT</p></div>
+            <p>Co-moving frame ray-tracing</p>
+          </div></br>
+          <div class="flow fade-in" style="-webkit-animation-delay: 0.4s;-moz-animation-delay: 0.4s;animation-delay: 0.4s;">
+            <div class="flowHeader"><p style="font-weight:bold;">Output</p></div>
+            <p>Line spectrum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+       
+<!---------------- Observations ------------------->
+      <div class="ex1"></div> 
+                                                                                             
+      <div class="row" style="padding-top: 5rem;">
+        <div class="column">
+          <h1 style="text-align:center;"> Observations </h1>
+          
+           <div style="width:100%;padding: 1em 2em 1em;text-align:center;">
+            <button id="obsBtn" onclick="showHideImg('reipurth','targets'); change('obsBtn'); showHideImg('reipurthInfo','lineInfo');" class="btn btn-1 btn-1c fade-in">REIPURTH CLASS</button>
+<!--             <button onclick="showHideImg('targets','reipurth')" class="btn btn-1 btn-1c">Reipurth Class</button> -->
+           </div>
+          
+          <ul class="fade-in" id="lineInfo" style="padding-top:3em;">
+          <li>Figure shows spectra of 29 T Tauri stars (columns) from the ESO Archive<a href="#eso">[2]</a>. The Stars are ordered by H⍺ intensity.</li></br>
+        
+            <li>Medium resolution (R~11600-18400) spectra from VLT’s X-Shooter, observed in Jan 2010.</li> </br>
+            
+            <li>Near simultaneous observations of H⍺ (6562 Å), Pa𝛾 (10938 Å), Paβ (12818 Å), and Br𝛾 (21655 Å).</li></br>
+            <li>A correlation of structure and intensity is seen between the infrared lines, this is not reflected by H⍺</li>
+          </ul>
+
+        <ul class="fade-in" id="reipurthInfo" style="display: none;text-align:center;padding:7em 0em 5em;">
+          <li> Reipurth classifications of the X-Shooter Observations (coloured bars) and the synthetic line profiles (hashed bars).</li>
+        </ul>
+
+        </div>
+        <div class="column">
+          <img class="fade-in" id="reipurth" src="./reipurth_poster_10_05_21_v0.png" alt="Reipurth Class" style="display:none;width:70%;">
+          <img class="fade-in" id="targets" src="./herczegStars_whiteAll_10_05_211_v2.png" alt="Line profiles" style="width:100%;">
+        </div>
+      </div>
+ <!---------------- Comparison ------------------->
+<!--       <div class="ex1"></div> 
+                      
+       <div class="row" style="padding-top: 5rem;">
+        <div class="column">
+          <img id="widths" src="./fwhmVsHwzm_10_05_21_v2.png" alt="Widths" style="width:100%;">
+          
+        </div>
+        <div class="column">
+          <h1 style="text-align:center;"> Comparison </h1>
+          <ul style="padding-top:3em;">
+            <li>Figure shows the FWHM vs. half width at 10% maxima (HW10%). Models are clipped so that H⍺ matches the observed HW10% range.</li></br>
+            <li>Synthetic H⍺ lines reproduce well the observed range of widths and distribution of Reipurth types<a href="#reipurth">[3]</a>.</li></br>
+            <li>The same models produce Pa𝛾, Paβ, and Br𝛾 lines ~70-100 kms<sup>-1</sup> too narrow.</li></br>
+            <li>Over 80% of the synthetic Pa𝛾, Paβ, and Br𝛾 lines exhibit Inverse P-Cygni profiles.</li></br>
+          </ul>
+        </div>
+      </div> -->
+<!--        -->
+<!--        -->
+      <div class="ex1"></div> 
+                                                                                             
+      <div class="row" style="padding-top: 5rem;">
+        <div class="column">
+          <h1 style="text-align:center;"> Comparison </h1>
+          
+           <div style="width:100%;padding: 1em 2em 1em;text-align:center;">
+            <button id="comBtn" onclick="showHideImg('example','widths'); change1('comBtn'); showHideImg('exampleInfo','widthInfo');" class="btn btn-1 btn-1c fade-in">EXAMPLE PROFILES</button>
+           </div>
+          
+          <ul class="fade-in" id="widthInfo" style="padding-top:3em;">
+              <li>Figure shows the FWHM vs. half width at 10% maxima (HW10%). Models are clipped so that H⍺ matches the observed HW10% range.</li></br>
+              <li>Synthetic H⍺ lines reproduce well the observed range of widths and distribution of Reipurth types<a href="#reipurth">[3]</a>.</li></br>
+              <li>The same models produce Pa𝛾, Paβ, and Br𝛾 lines ~70-100 kms<sup>-1</sup> too narrow.</li></br>
+              <li>Over 80% of the synthetic Pa𝛾, Paβ, and Br𝛾 lines exhibit Inverse P-Cygni profiles.</li></br>
+          </ul>
+
+        <ul class="fade-in" id="exampleInfo" style="display: none;text-align:center;padding:7em 0em 5em;">
+          <li> Three examples of the best match between synthetic and observed H⍺ profiles.</li></br>
+          <li> The models have been chosen because closely resemble the H⍺ obersvations in width and intensity.</li></br>
+          <li> Despite the good H⍺ correspondence the infrared lines are poorly fitted.</li></br>
+        </ul>
+
+        </div>
+        <div class="column">
+          <img class="fade-in" id="widths" src="./fwhmVsHwzm_10_05_21_v2.png" alt="Widths" style="width:100%;">
+          <img class="fade-in" id="example" src="./exampleProfileFit_10_05_21_v0.png" alt="Examples" style="display:none;width:70%;">
+        </div>
+      </div>
+
+
+      <!---------------- Footer ------------------->
+     <footer class="site-footer">
+       <p style="padding: 1em 0em 1em; font-weight: bold; text-align: center;">
+         This research has made use of the services of the ESO Science Archive Facility.
+       </p>
+
+       <div class="row">
+          <div class="column3">
+            <img src="./LOGO_ERC-FLAG_EU_.jpg" alt="ERC" style="width: 100%;">
+          </div>
+          
+          <div class="column2">
+            <h1 style="text-align:center;">Bibliography</h1>
+            <ol style="padding-bottom: 5em;">
+              <li>
+                <p id="harries2019">Harries, T. J., Haworth, T. J., Acreman, D., Ali, A. & Douglas, T. <cite>The TORUS radiation transfer code</cite>. Astronomy and Computing 27, 63–95 (2019).</p>
+              </li>
+              <li>
+                <p id="eso">Based on observations collected under ESO programme 084.C-1095(A).</p>
+              </li>
+              <li>
+                <p id="reipurth">Reipurth, B., Pedrosa, A. & Lago, M. T. V. T. <cite>Halpha emission in pre-main sequence stars. I. an atlas of line profiles</cite>. Astronomy and Astrophysics Supplement 120, 229–256 (1996).</p>
+              </li>
+            </ol>
+          </div>
+       </div>
       </footer>
     </main>
+    
+    <script>
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+        document.getElementById("header").style.fontSize = "0.4rem";
+      } else {
+        document.getElementById("header").style.fontSize = "1.3rem";
+      }
+    }
+      
+      
+   function showText(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+   function showHideImg(id1,id2) {
+    var x1 = document.getElementById(id1);
+     var x2 = document.getElementById(id2);
+    if (x1.style.display === "block") {
+      x1.style.display = "none";
+      x2.style.display = "block";
+    } else {
+      x1.style.display = "block";
+      x2.style.display = "none";
+    }
+  }
+      
+   function checktext(id1,id2,id3) {
+    var x1 = document.getElementById(id1);
+    var x2 = document.getElementById(id2);
+    var x3 = document.getElementById(id3);
+     
+    if (x2.style.display != "none") {
+      x1.style.display = "none";   
+    } 
+    if (x3.style.display != "none") {
+      x1.style.display = "none";   
+    } 
+     else {
+      x1.style.display = "block";
+    }
+  }
+      
+   function hideText(id) {
+    var x1 = document.getElementById(id);
+    if (x1.style.display != "none") {
+      x1.style.display = "none";
+    } 
+  }
+   function onlyShow(id) {
+    var x1 = document.getElementById(id);
+    if (x1.style.display == "none") {
+      x1.style.display = "block";
+    } 
+  }
+    
+   function imgZoom(id){
+     var x = document.getElementById(id);
+     if (x.style.transform === "scale(3)") {
+        x.style.transform = "scale(1)";
+     } else {
+       x.style.transform = "scale(3)";
+    }
+   }
+   function imgZoomOut(id){
+     var x = document.getElementById(id);
+     if (x.style.transform != "scale(1)") {
+        x.style.transform = "scale(1)";
+     } 
+   }
+  function change(id){
+      var el = document.getElementById(id);
+   if (el.firstChild.data == "REIPURTH CLASS") 
+   {
+       el.firstChild.data = "PROFILES";
+   }
+   else 
+   {
+     el.firstChild.data = "REIPURTH CLASS";
+   }
+}
+      
+function change1(id){
+      var el = document.getElementById(id);
+   if (el.firstChild.data == "EXAMPLE PROFILES") 
+   {
+       el.firstChild.data = "WIDTHS";
+   }
+   else 
+   {
+     el.firstChild.data = "EXAMPLE PROFILES";
+   }
+}
+      
+     
+    </script>
   </body>
 </html>
