@@ -12,64 +12,36 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skoomtown 2024 - Enter Password</title>
-    <link rel="stylesheet" href="assets/css/login.css">
+    <title>Skoomtown 2026</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Set the background image */
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: url('assets/images/space_warp.png') no-repeat center center fixed;
-            background-size: cover; /* Ensure the background covers the entire page */
-            font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 1; /* Ensure opacity is 1 */
-            filter: none; /* Ensure no filters are applied */
-        }
-
-        /* Center the login container and limit its width */
-        #login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            background: rgba(0, 0, 0, 0.05); /* Dark overlay */
-        }
-
-        .login-container-inner {
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            max-width: 400px; /* Limit the maximum width */
-            width: 90%; /* Make it responsive, using 90% of the available width, but limited by max-width */
-        }
-    </style>
 </head>
 <body>
-<div id="login-container">
-    <div class="login-container-inner">
-        <h1>Enter Password</h1>
-        <input type="password" id="password" placeholder="Password">
-        <button id="login-button" class="btn btn-1 btn-1c">Login</button>
-        <p data-id="alert" style="display:none;color:red;">Incorrect password, please try again.</p>
-    </div>
+    <header>
+        <h1>Skoomtown 2026</h1>
+        <nav>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="funding.html" class="nav-link">Funding</a>
+            <a href="lore.html" class="nav-link">Lore</a>
+            <a href="updates.html" class="nav-link">Updates</a>
+            <a href="posters.html" class="nav-link">Posters</a>
+        </nav>
+    </header>
+<div class="index_container">
+    <main>
+        <div class="image-container">
+            <img src="assets/images/skoomtown_2026_promo.png" alt="Skoomtown Banner 2006" class="header-image">
+        </div>
+    </main>
 </div>
+    <footer>
+        <p>&copy; 2026 Skoomtown. Assorted rights semi-reserved.</p>
+    </footer>
 
-!-- Include SHA-1 Library -->
+
+    <!-- Include SHA-1 Library -->
 <script src="assets/js/sha1.js"></script>
 <!-- Include the Password Protection Script -->
 <script src="assets/js/password-protect.js"></script>
-
 </body>
 </html>
