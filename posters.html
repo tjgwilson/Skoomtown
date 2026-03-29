@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZDNK3V6RR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1ZDNK3V6RR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skoomtown Posters</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+    <style>
+        .page-intro {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .page-intro p {
+            margin-bottom: 0;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .poster-card {
+            overflow: hidden;
+            border: 2px solid #00ffcc;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .poster-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 18px rgba(0, 255, 204, 0.35);
+        }
+
+        .poster-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 360px;
+            background: linear-gradient(
+                135deg,
+                rgba(0, 255, 204, 0.15),
+                rgba(191, 102, 255, 0.15)
+            );
+        }
+
+        .poster-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border: 2px solid #00ffcc;
+            border-radius: 12px;
+            box-shadow: 0 0 24px rgba(0, 255, 204, 0.4);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #ffffff;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            .poster-image {
+                min-height: 280px;
+            }
+
+            .lightbox {
+                padding: 16px;
+            }
+
+            .lightbox-close {
+                top: 12px;
+                right: 18px;
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Skoomtown Posters</h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="funding.html" class="nav-link active">Funding</a>
+            <a href="lore.html" class="nav-link">Lore</a>
+            <a href="updates.html" class="nav-link">Updates</a>
+            <a href="posters.html" class="nav-link active">Posters</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="page-intro">
+                <p>An archive of Skoomtown posters.</p>
+            </section>
+
+            <section class="poster-grid">
+                <article
+                    class="poster-card"
+                    onclick="openLightbox('assets/images/skoomtown_2026_promo.png', 'Skoomtown 2026 promo poster')"
+                >
+                    <div class="poster-image">
+                        <img
+                            src="assets/images/skoomtown_2026_promo.png"
+                            alt="Skoomtown 2026 promo poster"
+                        >
+                    </div>
+                </article>
+
+                <article
+                    class="poster-card"
+                    onclick="openLightbox('assets/images/skoomtown_2025_promo.jpg', 'Skoomtown 2025 promo poster')"
+                >
+                    <div class="poster-image">
+                        <img
+                            src="assets/images/skoomtown_2025_promo.jpg"
+                            alt="Skoomtown 2025 promo poster"
+                        >
+                    </div>
+                </article>
+
+                <article
+                    class="poster-card"
+                    onclick="openLightbox('assets/images/skoomtown_2024_promo.jpg', 'Skoomtown 2024 promo poster')"
+                >
+                    <div class="poster-image">
+                        <img
+                            src="assets/images/skoomtown_2024_promo.jpg"
+                            alt="Skoomtown 2024 promo poster"
+                        >
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <div
+        id="lightbox"
+        class="lightbox"
+        onclick="closeLightbox()"
+    >
+        <span
+            class="lightbox-close"
+            onclick="closeLightbox(event)"
+        >&times;</span>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Skoomtown. Assorted rights semi-reserved.</p>
+    </footer>
+
+    <script src="assets/js/sha1.js"></script>
+    <script src="assets/js/password-protect.js"></script>
+
+    <script>
+        function openLightbox(imageSrc, imageAlt) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = imageAlt;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+
+            lightbox.classList.remove('active');
+            lightboxImage.src = '';
+            lightboxImage.alt = '';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
