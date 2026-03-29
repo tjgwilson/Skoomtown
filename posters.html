@@ -24,16 +24,22 @@
     >
     <style>
         .page-intro {
-            margin-bottom: 30px;
-            padding: 20px;
+            margin-bottom: 10px;
+            padding: 12px 24px;
             border: 2px solid #00ffcc;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.05);
             text-align: center;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .page-intro p {
-            margin-bottom: 0;
+            margin: 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
 
         .poster-grid {
@@ -131,7 +137,7 @@
         <h1>Skoomtown Posters</h1>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
-            <a href="funding.html" class="nav-link active">Funding</a>
+            <a href="funding.html" class="nav-link">Funding</a>
             <a href="lore.html" class="nav-link">Lore</a>
             <a href="updates.html" class="nav-link">Updates</a>
             <a href="posters.html" class="nav-link active">Posters</a>
@@ -141,7 +147,7 @@
     <div class="container">
         <main>
             <section class="page-intro">
-                <p>An archive of Skoomtown posters.</p>
+                <p>An archive of Skoomtown posters</p>
             </section>
 
             <section class="poster-grid">
@@ -199,10 +205,6 @@
     <footer>
         <p>&copy; 2026 Skoomtown. Assorted rights semi-reserved.</p>
     </footer>
-
-    <script src="assets/js/sha1.js"></script>
-    <script src="assets/js/password-protect.js"></script>
-
     <script>
         function openLightbox(imageSrc, imageAlt) {
             const lightbox = document.getElementById('lightbox');
