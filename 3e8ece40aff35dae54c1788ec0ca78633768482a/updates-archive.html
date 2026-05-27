@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skoomtown Updates</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Skoomtown Updates Archive</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -24,29 +24,28 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             color: #fff;
-            font-size: large; /* Or any size you prefer */
-            text-align: center; /* Center text inside the TOC box */
+            font-size: large;
+            text-align: center;
         }
 
         .toc h2 {
             color: #fff;
             margin-top: 0;
-            font-size: 1.5em; /* Increase the font size of the TOC heading if desired */
+            font-size: 1.5em;
         }
 
         .toc a {
             color: #fff;
             text-decoration: none;
-            display: inline-block; /* Make links inline-block for centering */
+            display: inline-block;
             margin-bottom: 5px;
-            width: 100%; /* Make sure the link takes full width if needed */
+            width: 100%;
         }
 
         .toc a:hover {
             color: #bf66ff;
         }
 
-        /* Style for update posts */
         .update-post {
             margin-bottom: 40px;
             padding: 20px;
@@ -61,13 +60,11 @@
             color: #bf66ff;
         }
 
-        /* Style for the horizontal line between updates */
         .update-divider {
             margin: 40px 0;
             border: 1px solid #00ffcc;
         }
 
-        /* Grid style for images */
         .image-grid {
             display: flex;
             flex-wrap: wrap;
@@ -76,20 +73,32 @@
         }
 
         .image-grid figure {
-            flex: 1 1 calc(33.333% - 30px); /* Each figure takes up roughly a third of the row */
+            flex: 1 1 calc(33.333% - 30px);
             margin: 0;
         }
 
         .image-grid img {
-            width: 100%; /* Make images fill the container */
+            width: 100%;
             height: auto;
-            border-radius: 8px; /* Optional: add rounded corners to images */
+            border-radius: 8px;
         }
 
-        /* Responsive adjustment for smaller screens */
+        .archive-note {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .archive-note a {
+            color: #00ffcc;
+        }
+
         @media (max-width: 600px) {
             .image-grid figure {
-                flex: 1 1 100%; /* Make each figure take up the full width on small screens */
+                flex: 1 1 100%;
             }
         }
     </style>
@@ -97,25 +106,29 @@
 <body>
 
     <header>
-        <h1>Skoomtown Updates</h1>
+        <h1>Skoomtown Updates Archive</h1>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
-            <a href="funding.html" class="nav-link">Funding</a>
             <a href="lore.html" class="nav-link">Lore</a>
-            <a href="updates.html" class="nav-link active">Updates</a>
+            <a href="updates.html" class="nav-link">Updates</a>
             <a href="posters.html" class="nav-link">Posters</a>
         </nav>
     </header>
     <div class="container">
         <main>
-            <!-- Table of Contents -->
+            <section class="archive-note">
+                <p>
+                    These are older Skoomtown announcements. For the current
+                    updates page, head back <a href="updates.html">here</a>.
+                </p>
+            </section>
+
             <div class="toc">
                 <a href="#update-1">Greetings cosmic travelers!</a>
                 <a href="#update-2">Glamping Upgrade Available!</a>
                 <a href="#update-3">Meme Wall!</a>
             </div>
 
-            <!-- First Update -->
             <div id="update-1" class="update-post">
                 <div class="update-date">August 17, 2024</div>
                 <p>🚀 Greetings cosmic travelers! 🚀</p>
@@ -131,10 +144,8 @@
                 <p>I can’t wait to catch up with returning Skoomers and meet our new recruits! I hope everyone is as excited as we are on the planning team. We’re all absolutely stoked and working hard to make this the best Skoomtown yet! 🌠🔫🤖</p>
             </div>
 
-            <!-- Divider between updates -->
             <hr class="update-divider">
 
-            <!-- Second Update -->
             <div id="update-2" class="update-post">
                 <div class="update-date">Glamping Upgrade Available!</div>
                 <p>We have just one glamping option left if any of you want to party in luxurious comfort and style! Say hello to Rosie:</p>
@@ -157,32 +168,30 @@
                 </ul>
                 <p>Contact Beaux directly or speak to a member of the organising team.🚀</p>
 
-                    <div class="image-grid">
-                <figure>
-                    <img src="assets/images/rosie1.jpg" alt="Rosie Gypsy Caravan Interior">
-                </figure>
-                <figure>
-                    <img src="assets/images/rosie2.jpg" alt="Rosie Gypsy Caravan Exterior">
-                </figure>
-                <figure>
-                    <img src="assets/images/rosie3.jpg" alt="Rosie Shelter">
-                </figure>
-                <figure>
-                    <img src="assets/images/rosie4.jpg" alt="Rosie at Night">
-                </figure>
-                <figure>
-                    <img src="assets/images/rosie5.jpg" alt="Rosie at Night">
-                </figure>
-            </div>
+                <div class="image-grid">
+                    <figure>
+                        <img src="../assets/images/rosie1.jpg" alt="Rosie Gypsy Caravan Interior">
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/rosie2.jpg" alt="Rosie Gypsy Caravan Exterior">
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/rosie3.jpg" alt="Rosie Shelter">
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/rosie4.jpg" alt="Rosie at Night">
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/rosie5.jpg" alt="Rosie at Night">
+                    </figure>
+                </div>
             </div>
 
-            <!-- Divider between updates -->
             <hr class="update-divider">
 
-        <!-- New Update -->
             <div id="update-3" class="update-post">
-            <div class="update-date">Meme Wall</div>
-                <img src="assets/images/meme.jpeg" alt="Meme Wall Promo" class="update-image">
+                <div class="update-date">Meme Wall</div>
+                <img src="../assets/images/meme.jpeg" alt="Meme Wall Promo" class="update-image">
 
                 <h2>Calling all Memers!</h2>
 
@@ -195,12 +204,11 @@
                 <p>Together, we will create a masterpiece.</p>
             </div>
 
-            <!-- Divider between updates -->
             <hr class="update-divider">
         </main>
     </div>
-<footer>
-    <p>&copy; 2026 Skoomtown. Assorted rights semi-reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Skoomtown. Assorted rights semi-reserved.</p>
+    </footer>
 </body>
 </html>
