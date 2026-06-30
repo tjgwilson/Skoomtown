@@ -36,14 +36,33 @@
             text-align: center;
         }
 
+        .hero-title {
+            padding: 20px 28px;
+            background: transparent;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 0;
+        }
+
         .hero-box h2 {
             margin-top: 0;
             margin-bottom: 14px;
         }
 
+        .hero-title h2 {
+            margin-bottom: 0;
+        }
+
         .hero-box p {
-            max-width: 800px;
             margin: 0 auto 12px auto;
+        }
+
+        .budget-box {
+            text-align: left;
+        }
+
+        .budget-box h2 {
+            text-align: center;
         }
 
         .funding-grid {
@@ -70,6 +89,15 @@
             margin-bottom: 0;
         }
 
+        .content-card ul {
+            margin: 12px 0 0;
+            padding-left: 20px;
+        }
+
+        .content-card li + li {
+            margin-top: 8px;
+        }
+
         .support-box {
             margin-top: 18px;
             padding: 18px;
@@ -78,71 +106,8 @@
             border-radius: 8px;
         }
 
-        .photo-section {
-            padding: 24px;
-            border: 2px solid #00ffcc;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .photo-section h3 {
-            margin-top: 0;
-            margin-bottom: 18px;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .photo-placeholder {
-            min-height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            border: 2px dashed rgba(0, 255, 204, 0.5);
-            border-radius: 10px;
-            background: linear-gradient(
-                135deg,
-                rgba(0, 255, 204, 0.08),
-                rgba(191, 102, 255, 0.08)
-            );
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .cta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 22px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 22px;
-            border: 2px solid #00ffcc;
-            border-radius: 999px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.2s ease;
-            background-color: rgba(0, 255, 204, 0.08);
-        }
-
-        .cta-button:hover {
-            background-color: rgba(0, 255, 204, 0.18);
-            box-shadow: 0 0 14px rgba(0, 255, 204, 0.25);
-        }
-
         @media (max-width: 900px) {
             .funding-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .photo-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -155,86 +120,80 @@
             <a href="index.html" class="nav-link">Home</a>
             <a href="lore.html" class="nav-link">Lore</a>
             <a href="factions.html" class="nav-link">Factions</a>
+            <a href="funding.html" class="nav-link active">Funding</a>
             <a href="updates.html" class="nav-link">Updates</a>
+            <a href="posters.html" class="nav-link">Posters</a>
         </nav>
     </header>
 
     <div class="container">
         <main>
-            <section class="hero-box">
+            <section class="hero-box hero-title">
                 <h2>Help Build the Future of Skoomtown</h2>
-                <p>
-                    We are raising funds for new communal spaces, tent areas,
-                    and other upgrades to help make Skoomtown even better.
-                </p>
-                <p>
-                    One of our current goals is a large bell tent to create a
-                    welcoming shared chill space for gathering, resting, and
-                    hanging out together.
-                </p>
+            </section>
+
+            <section class="hero-box budget-box">
+                <h2>How we budget</h2>
+                    <p>
+                        Every year we do our best to forecast our spending well in advance so that we can keep the party
+                        contribution price reasonable. No one profits, all organisers pay the same contribution as
+                        everyone else, and anyone in glamping pays the normal rate for it on top. Any spare funds go
+                        directly into next year’s budget, but it’s usually pretty close.
+                        This way when you pay your contribution you know that your money is being spent on the year
+                        you’re actually there, give or take a few quid that might roll over.
+                    </p>
+
             </section>
 
             <section class="funding-grid">
                 <div class="content-card">
-                    <h3>What we are fundraising for</h3>
+                    <h3>Fundraising Goals</h3>
                     <p>
-                        We would love to add a large bell tent to Skoomtown as
-                        a communal space and chill area. Somewhere cosy, useful,
-                        and a bit magical for people to gather in throughout the
-                        weekend.
+                        We have some monthly expenses as well as big fundraising goals that we would like to collect
+                        donations for separately from the party contribution so that we can keep the party
+                        contribution price low.
                     </p>
                     <p>
-                        We are also looking at other practical improvements to
-                        the site over time, including new tent areas and general
-                        upgrades that will help the town keep growing.
+                        We welcome one-off donations and monthly donations of any amount, even if it’s just £1 a
+                        month to support us in our out-of-party running costs.
                     </p>
-
-                    <div class="support-box">
-                        <p>
-                            If you love Skoomtown and all we stand for,
-                            committing to just a few pounds a month could really
-                            help us keep building something special.
-                        </p>
-                        <p>
-                            We are trying out crowdfunding as a way to support
-                            future improvements and keep investing in the event.
-                        </p>
-                    </div>
-
-                    <div class="cta-row">
-                        <a href="#" class="cta-button">Support the Crowdfunder</a>
-                        <a href="#" class="cta-button">Read More</a>
-                    </div>
+                    <p>
+                        Monthly donations will go towards monthly costs first, and any excess will go towards bigger
+                        goals.
+                    </p>
+                    <p>Our main focuses right now:</p>
+                    <ul>
+                        <li>Mixcloud subscription so we can upload DJ sets for everyone to listen to or download</li>
+                        <li>Monthly contribution towards long term storage of set, decorations and equipment</li>
+                        <li>Better furniture, contingent on enough funding for adequate storage space first</li>
+                        <li>Some very large bell tents</li>
+                        <li>A large marquee</li>
+                    </ul>
                 </div>
 
                 <div class="content-card">
-                    <h3>Why it matters</h3>
-                    <p>
-                        Skoomtown has always been built through community,
-                        creativity, effort, and care. Funding helps us improve
-                        the shared spaces that make the whole weekend feel more
-                        welcoming, comfortable, and memorable.
-                    </p>
-                    <p>
-                        Even small regular contributions can make a real
-                        difference when they build up over time.
-                    </p>
+                    <h3>Donation perks</h3>
+
+                    <p><b>£1/month / £10 & above:</b> A unique sticker on theme for the party</p>
+                    <p><b>£3/month / £30 & above:</b> A unique handmade little trinket on theme for the party</p>
+                    <p><b>£5/month / £50 & above:</b> Pick one of the following:</p>
+                    <ul>
+                        <li>Be on the official tasting panel of the drinks competition. <br><b>3 of 3 available</b></br></li>
+                        <li>Get a special amateur photoshoot with Craig in the style of a religious portrait. <br><i>The photoshoot will be at the event, and afterwards we will send you an edited digital picture and a hard copy.</i></br><b>10 of 10 available</b></li>
+                        <li>Your very own red beret and an official framed certificate of Tom-ness pledging your identity to the cause of Tommunism, presented to you at the party. <br><b>10 of 10 available</b></br></li>
+                    </ul>
+
+                    <div class="support-box">
+                        For monthly donators, perks renew every year.
+                    </div>
+
                 </div>
             </section>
 
-            <section class="photo-section">
-                <h3>Photos and concept space</h3>
-                <div class="photo-grid">
-                    <div class="photo-placeholder">
-                        Add bell tent photo here
-                    </div>
-                    <div class="photo-placeholder">
-                        Add communal chill area photo here
-                    </div>
-                    <div class="photo-placeholder">
-                        Add future upgrade photo here
-                    </div>
-                </div>
+            <section class="hero-box">
+                <h2>Donate Here</h2>
+                <p>Please fill out the <a href="https://forms.gle/GuCwm28jz9ArguRD9"><b>donation form</b></a>. Payment details are on page 2.</p>
+
             </section>
         </main>
     </div>
