@@ -99,6 +99,27 @@
             border: 1px solid rgba(0, 255, 204, 0.35);
         }
 
+        .announcement-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+            align-items: start;
+        }
+
+        .announcement-gallery .announcement-image {
+            margin-top: 0;
+            display: inline-block;
+            width: 100%;
+            background: transparent;
+        }
+
+        .announcement-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .toc-card {
             position: sticky;
             top: 190px;
@@ -139,6 +160,12 @@
                 order: -1;
             }
         }
+
+        @media (max-width: 700px) {
+            .announcement-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -159,6 +186,25 @@
         <main>
             <div class="announcements-layout">
                 <section class="announcements-list">
+                    <article class="announcement-card" id="announcement-2026-08-30-donations">
+                        <h3>Rare mushroom-like objects</h3>
+                        <p class="announcement-date">30 Aug 2026</p>
+                        <p>Hellooo Skoomers! 👾🍄✨</p>
+                        <p>As the days rapidly tick down to the beginning of our adventure on Shroomiter, one of our advanced planetfall scout probes has just returned. Skudding out of a hyperspace tunnel, it has brought back some exciting planetside samples: strange and frankly alarming mushroom-like objects. These rare and valuable items are one of a kind, and they can be yours for only a small donation!</p>
+                        <p>In all seriousness, we are asking for donations this year to help fund exciting Skoomtown-improving augmentations: storage, new tents, a Mixcloud account, outdoor lighting and more. Details can be found here <a class="announcement-link" href="donations.html">on the donations page</a>.</p>
+                        <p>If you can or would like to donate, we will reward you with exciting limited edition mushroomy perks and events, such as a photoshoot with Craig or a chance to be an official drinks competition taster. See <a class="announcement-link" href="donations.html">the donations page</a> for more details.</p>
+                        <p>Thank youuuuu all so much, and see you in real space in just a few days' time!</p>
+                        <p>Tommunism endorses this message!</p>
+                        <div class="announcement-gallery">
+                            <div class="announcement-image">
+                                <img src="../assets/images/skoomtown_2026_donations_mushrooms.jpeg" alt="Decorative mushroom creations displayed on mirrored disco balls">
+                            </div>
+                            <div class="announcement-image">
+                                <img src="../assets/images/skoomtown_2026_donations_stickers.jpeg" alt="Rainbow holographic Skoomtown 2026 mushroom stickers">
+                            </div>
+                        </div>
+                    </article>
+
                     <article class="announcement-card" id="announcement-2026-08-30-craig">
                         <h3>FACTION ANNOUNCEMENT - The Cult of Craig</h3>
                         <p class="announcement-date">30 Aug 2026</p>
@@ -377,6 +423,7 @@
                 <aside class="toc-card">
                     <h3>Contents</h3>
                     <ul>
+                        <li><a href="#announcement-2026-08-30-donations">30 Aug 2026 - Donations and mushroom perks</a></li>
                         <li><a href="#announcement-2026-08-30-craig">30 Aug 2026 - Cult of Craig</a></li>
                         <li><a href="#announcement-2026-08-30-weather">30 Aug 2026 - Weather update</a></li>
                         <li><a href="#announcement-2026-08-26-water">26 Aug 2026 - Requests and water notice</a></li>
