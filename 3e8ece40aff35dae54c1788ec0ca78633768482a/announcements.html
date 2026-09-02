@@ -99,6 +99,11 @@
             border: 1px solid rgba(0, 255, 204, 0.35);
         }
 
+        .announcement-audio {
+            width: 100%;
+            margin-top: 18px;
+        }
+
         .announcement-gallery {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -186,6 +191,16 @@
         <main>
             <div class="announcements-layout">
                 <section class="announcements-list">
+                    <article class="announcement-card" id="announcement-2026-09-01-beth-transmission">
+                        <h3>Queen Beth's last transmission</h3>
+                        <p class="announcement-date">1 Sep 2026</p>
+                        <p>We've recovered the last transmission from Queen Beth before the distress signal was sent! I wonder what has happened to her... Lets all pray to Craig for her safe return to the party! (yesterday)</p>
+                        <audio class="announcement-audio" controls>
+                            <source src="../assets/audio/skoomtown_2026_queen_beth_transmission.mpeg" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </article>
+
                     <article class="announcement-card" id="announcement-2026-09-01">
                         <h3>Allergies, post office and landing update</h3>
                         <p class="announcement-date">1 Sep 2026</p>
@@ -443,6 +458,7 @@
                 <aside class="toc-card">
                     <h3>Contents</h3>
                     <ul>
+                        <li><a href="#announcement-2026-09-01-beth-transmission">1 Sep 2026 - Queen Beth's last transmission</a></li>
                         <li><a href="#announcement-2026-09-01">1 Sep 2026 - Allergies, post office and landing</a></li>
                         <li><a href="#announcement-2026-08-30-donations">30 Aug 2026 - Donations and mushroom perks</a></li>
                         <li><a href="#announcement-2026-08-30-craig">30 Aug 2026 - Cult of Craig</a></li>
